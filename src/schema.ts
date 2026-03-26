@@ -71,6 +71,7 @@ const ValiditySchema = z.object({
   issuedAt: z.string().datetime(),
   expiresAt: z.string().datetime(),
   revocationEndpoint: z.string().url(),
+  signingAlgorithm: z.enum(['Ed25519', 'ML-DSA-65']).optional(),
   onChainAnchor: z.object({
     chain: z.string(),
     block: z.number().int().min(0),

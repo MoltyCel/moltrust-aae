@@ -5,6 +5,6 @@ export { AAESchema } from './schema';
 export type {
   AAE, Mandate, Constraints, Validity,
   Delegation, Duration, Limits, Scope, Obligations,
-  OnChainAnchor, Purpose, Currency,
+  OnChainAnchor, Purpose, Currency, SigningAlgorithm,
   ValidationResult, EvaluationContext, EvaluationResult
 } from './types';

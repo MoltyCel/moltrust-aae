@@ -9,6 +9,8 @@ export type Purpose =
 
 export type Currency = 'USDC' | 'EUR' | 'CHF' | 'USD';
 
+export type SigningAlgorithm = 'Ed25519' | 'ML-DSA-65';
+
 export interface Delegation {
   allowed: boolean;
   maxSubAgents: number;
@@ -69,6 +71,7 @@ export interface Validity {
   issuedAt: string;           // ISO 8601
   expiresAt: string;          // ISO 8601
   revocationEndpoint: string; // URL
+  signingAlgorithm?: SigningAlgorithm; // default: Ed25519, future: ML-DSA-65
   onChainAnchor?: OnChainAnchor;
 }
 
